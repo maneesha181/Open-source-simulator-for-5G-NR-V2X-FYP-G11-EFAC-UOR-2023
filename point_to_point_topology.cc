@@ -14,7 +14,7 @@ NS_LOG_COMPONENT_DEFINE ("PointToPointScriptExample"); // define log component f
 
 int main (int argc, char *argv[])
 {
-CommandLine cmd (FILE);
+CommandLine cmd (__FILE__);
 cmd.Parse (argc, argv);
 
 Time::SetResolution (Time::NS); // set time resolution
@@ -58,4 +58,3 @@ UdpEchoServerHelper echoServer (9); // create server application on port
   Simulator::Destroy ();
   return 0;
 }
-
